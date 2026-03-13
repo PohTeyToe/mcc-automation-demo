@@ -9,7 +9,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+// Using simple state tabs instead of base-ui Tabs to avoid flex-row layout bug
 import {
   Table,
   TableBody,
@@ -630,6 +630,8 @@ function HowThisWorks() {
 // ----- Main Page -----
 
 export default function DashboardPage() {
+  const [activeTab, setActiveTab] = useState<"admin" | "client">("admin");
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[var(--navy)]/[0.02] to-transparent">
       {/* Header */}
@@ -647,30 +649,33 @@ export default function DashboardPage() {
 
       {/* Content */}
       <div className="mx-auto max-w-6xl px-4 py-8">
-        <Tabs defaultValue="admin">
-          <div className="mb-6">
-            <TabsList>
-              <TabsTrigger value="admin">
-                <ShieldCheck className="h-4 w-4 mr-1.5" />
-                Admin View (Tammy)
-              </TabsTrigger>
-              <TabsTrigger value="client">
-                <User className="h-4 w-4 mr-1.5" />
-                Client View (Mountain View Bakery)
-              </TabsTrigger>
-            </TabsList>
-          </div>
+        {/* Tab Switcher */}
+        <div className="mb-6 inline-flex items-center rounded-lg bg-muted p-1">
+          <button
+            onClick={() => setActiveTab("admin")}
+            className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-all ${
+              activeTab === "admin"
+                ? "bg-background text-foreground shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            <ShieldCheck className="h-4 w-4" />
+            Admin View (Tammy)
+          </button>
+          <button
+            onClick={() => setActiveTab("client")}
+            className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-all ${
+              activeTab === "client"
+                ? "bg-background text-foreground shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            <User className="h-4 w-4" />
+            Client View (Mountain View Bakery)
+          </button>
+        </div>
 
-          <div>
-            <TabsContent value="admin">
-              <AdminView />
-            </TabsContent>
-
-            <TabsContent value="client">
-              <ClientView />
-            </TabsContent>
-          </div>
-        </Tabs>
+        {activeTab === "admin" ? <AdminView /> : <ClientView />}
 
         <Separator className="my-8" />
 
