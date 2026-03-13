@@ -647,25 +647,29 @@ export default function DashboardPage() {
 
       {/* Content */}
       <div className="mx-auto max-w-6xl px-4 py-8">
-        <Tabs defaultValue="admin" style={{ flexDirection: "column" }}>
-          <TabsList className="mb-6">
-            <TabsTrigger value="admin">
-              <ShieldCheck className="h-4 w-4 mr-1.5" />
-              Admin View (Tammy)
-            </TabsTrigger>
-            <TabsTrigger value="client">
-              <User className="h-4 w-4 mr-1.5" />
-              Client View (Mountain View Bakery)
-            </TabsTrigger>
-          </TabsList>
+        <Tabs defaultValue="admin">
+          <div className="mb-6">
+            <TabsList>
+              <TabsTrigger value="admin">
+                <ShieldCheck className="h-4 w-4 mr-1.5" />
+                Admin View (Tammy)
+              </TabsTrigger>
+              <TabsTrigger value="client">
+                <User className="h-4 w-4 mr-1.5" />
+                Client View (Mountain View Bakery)
+              </TabsTrigger>
+            </TabsList>
+          </div>
 
-          <TabsContent value="admin">
-            <AdminView />
-          </TabsContent>
+          <div>
+            <TabsContent value="admin">
+              <AdminView />
+            </TabsContent>
 
-          <TabsContent value="client">
-            <ClientView />
-          </TabsContent>
+            <TabsContent value="client">
+              <ClientView />
+            </TabsContent>
+          </div>
         </Tabs>
 
         <Separator className="my-8" />
