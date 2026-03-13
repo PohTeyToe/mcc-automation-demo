@@ -647,7 +647,7 @@ export default function DashboardPage() {
 
       {/* Content */}
       <div className="mx-auto max-w-6xl px-4 py-8">
-        <Tabs defaultValue="admin">
+        <Tabs defaultValue="admin" style={{ flexDirection: "column" }}>
           <TabsList className="mb-6">
             <TabsTrigger value="admin">
               <ShieldCheck className="h-4 w-4 mr-1.5" />
