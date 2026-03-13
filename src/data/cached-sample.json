@@ -1,0 +1,35 @@
+{
+  "businessName": "Sample Business (From Tammy's Financial Statement)",
+  "year1Label": "2024",
+  "year0Label": "2023",
+  "revenue": [
+    { "label": "Revenue/Sales", "year1": 930265, "year0": 1134653 }
+  ],
+  "cogs": [
+    { "label": "Cost of Goods Sold", "year1": 530977, "year0": 656119 }
+  ],
+  "expenses": [
+    { "label": "Advertising & Promotion", "year1": 5498, "year0": 6498 },
+    { "label": "Amortization", "year1": 21498, "year0": 21498 },
+    { "label": "Bank Charges", "year1": 12879, "year0": 12580 },
+    { "label": "Dues & Subscriptions", "year1": 1200, "year0": 1200 },
+    { "label": "Insurance", "year1": 8450, "year0": 7800 },
+    { "label": "Interest & Bank Charges", "year1": 3200, "year0": 2900 },
+    { "label": "Management Salary", "year1": 72000, "year0": 72000 },
+    { "label": "Office Supplies", "year1": 3450, "year0": 4100 },
+    { "label": "Professional Fees", "year1": 8500, "year0": 7200 },
+    { "label": "Rent", "year1": 96000, "year0": 96000 },
+    { "label": "Repairs & Maintenance", "year1": 15680, "year0": 12400 },
+    { "label": "Royalties", "year1": 46513, "year0": 56733 },
+    { "label": "Salaries & Wages", "year1": 98765, "year0": 65432 },
+    { "label": "Telephone & Internet", "year1": 4800, "year0": 4500 },
+    { "label": "Travel", "year1": 2400, "year0": 1800 },
+    { "label": "Utilities", "year1": 18600, "year0": 16800 },
+    { "label": "Miscellaneous", "year1": 7912, "year0": 6628 }
+  ],
+  "totalRevenue": { "year1": 930265, "year0": 1134653 },
+  "totalCogs": { "year1": 530977, "year0": 656119 },
+  "grossProfit": { "year1": 399288, "year0": 478534 },
+  "totalExpenses": { "year1": 427345, "year0": 386069 },
+  "netIncome": { "year1": -28057, "year0": 92465 }
+}
