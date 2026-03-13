@@ -28,7 +28,7 @@ export default function HomePage() {
             <Button render={<Link href="/extract" />} size="lg" className="bg-[var(--gold)] text-[var(--navy)] hover:bg-[var(--gold-light)] font-semibold">
               Try Financial Extractor
             </Button>
-            <Button render={<Link href="/questions" />} size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+            <Button render={<Link href="/questions" />} size="lg" className="border border-white/40 bg-transparent text-white hover:bg-white/10 font-semibold">
               Read All 8 Answers
             </Button>
           </div>
